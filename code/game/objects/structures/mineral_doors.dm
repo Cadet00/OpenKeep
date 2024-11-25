@@ -190,13 +190,6 @@
 						addtimer(CALLBACK(src, PROC_REF(Close), FALSE), 25)
 
 
-/obj/structure/mineral_door/attack_ai(mob/user) //those aren't machinery, they're just big fucking slabs of a mineral
-	if(isAI(user)) //so the AI can't open it
-		return
-	else if(iscyborg(user)) //but cyborgs can
-		if(get_dist(user,src) <= 1) //not remotely though
-			return TryToSwitchState(user)
-
 /obj/structure/mineral_door/attack_paw(mob/user)
 	return attack_hand(user)
 
@@ -590,7 +583,7 @@
 	icon_state = "uranium"
 	sheetType = /obj/item/stack/sheet/mineral/uranium
 	max_integrity = 300
-	light_range = 2
+	light_outer_range =  2
 
 /obj/structure/mineral_door/uranium/ComponentInitialize()
 	return
@@ -820,6 +813,10 @@
 	icon_state = base_state
 
 /obj/structure/mineral_door/wood/deadbolt/attack_right(mob/user)
+	if(istype(user.get_active_held_item(), /obj/item/roguekey))
+		var/obj/item/roguekey/held = user.get_active_held_item()
+		trykeylock(held, user, TRUE)
+		return
 	if(door_opened || isSwitchingStates)
 		return
 	if(lockbroken)
@@ -862,6 +859,10 @@
 	repair_skill = /datum/skill/craft/masonry
 
 /obj/structure/mineral_door/wood/donjon/stone/attack_right(mob/user)
+	if(istype(user.get_active_held_item(), /obj/item/roguekey))
+		var/obj/item/roguekey/held = user.get_active_held_item()
+		trykeylock(held, user, TRUE)
+		return
 	return
 
 /obj/structure/mineral_door/wood/donjon/stone/view_toggle(mob/user)
@@ -873,6 +874,10 @@
 	..()
 
 /obj/structure/mineral_door/wood/donjon/attack_right(mob/user)
+	if(istype(user.get_active_held_item(), /obj/item/roguekey))
+		var/obj/item/roguekey/held = user.get_active_held_item()
+		trykeylock(held, user, TRUE)
+		return
 	if(door_opened || isSwitchingStates)
 		return
 	if(brokenstate)
