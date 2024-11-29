@@ -40,12 +40,16 @@
 	icon_state = "ppflowers_[rand(1, 3)]"
 	. = ..()
 
-/obj/structure/flora/rogueflower/stalkybush
-	icon_state = "stalkybush_1"
+/obj/structure/flora/roguegrass/stalky
+	name = ""
+	desc = ""
+	icon = 'icons/roguetown/misc/pigflora.dmi'
+	icon_state = "stalkygrass"
+	opacity = FALSE
 
-/obj/structure/flora/rogueflower/stalkybush/Initialize()
-	icon_state = "stalkybush_[rand(1, 3)]"
-	. = ..()
+/obj/structure/flora/roguegrass/stalky/update_icon()
+	dir = pick(GLOB.cardinals)
+
 
 // ===================================================================================
 /*	..................   Dwarf Outpost   ................... */
@@ -63,6 +67,36 @@
 	id = "Dwarf_Outpost_2"
 	mappath = "_maps/map_files/templates/dwarf_outpost/Dwarf_Outpost_1.dmm"
 
+
+/*	..................   Roadblock   ................... */
+/obj/effect/landmark/map_load_mark/hamlet_roadblock
+	name = "Roadblock"
+	templates = list( "roadblock_1","roadblock_2" )
+
+/datum/map_template/roadblock_i
+	name = "Roadblock"
+	id = "roadblock_1"
+	mappath = "_maps/map_files/templates/neuhamlet/roadblock_1.dmm"
+
+/datum/map_template/roadblock_ii
+	name = "No roadblock"
+	id = "roadblock_2"
+	mappath = "_maps/map_files/templates/neuhamlet/roadblock_2.dmm"
+
+/*	..................   Outlaw camp   ................... */
+/obj/effect/landmark/map_load_mark/hamlet_outlaws
+	name = "Outlaw camp"
+	templates = list( "outlawcamp_1","outlawcamp_2" )
+
+/datum/map_template/outlawcamp_i
+	name = "Outlaw camp"
+	id = "outlawcamp_1"
+	mappath = "_maps/map_files/templates/neuhamlet/outlawcamp_1.dmm"
+
+/datum/map_template/outlawcamp_ii
+	name = "Empty outlaw camp"
+	id = "outlawcamp_2"
+	mappath = "_maps/map_files/templates/neuhamlet/outlawcamp_2.dmm"
 
 // ===================================================================================
 /*
@@ -596,10 +630,20 @@
 /obj/effect/decal/shadow_floor/corner
 	icon_state = "shad_floorcorn"
 
+/obj/effect/decal/miasma
+	name = ""
+	desc = ""
+	icon = 'icons/roguetown/mob/rotten.dmi'
+	icon_state = "deadite"
+	mouse_opacity = 0
 
 /obj/effect/decal/remains/human/old
 	name = "remains"
 	color = "#d6b3a5"
+
+/obj/effect/decal/remains/human/old/small
+	icon_state = "remainslarva"
+
 
 /obj/structure/fluff/shipssprote
 	name = ""
@@ -789,3 +833,20 @@
 	perfect_butcher_results = list(/obj/item/reagent_containers/food/snacks/rogue/meat/spider = 2,
 							/obj/item/reagent_containers/food/snacks/rogue/honey = 2,
 							/obj/item/natural/silk = 3)
+
+
+// ==============================================================
+/*	..................   Various mapping aides   ................... */
+/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/broken
+	desc = "A long shirt of maille, this one is made for a short man it seems."
+/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/broken/Initialize()
+	. = ..()
+	obj_break()
+
+/obj/item/clothing/suit/roguetown/armor/chainmail/battered
+	desc = "A good quality haubergon, but weakened by many blows."
+	max_integrity = INTEGRITY_STANDARD
+
+/obj/structure/roguethrone/statues
+	icon = 'modular/Mapping/icons/96x96.dmi'
+
