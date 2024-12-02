@@ -4529,10 +4529,6 @@
 /obj/effect/decal/turfedge_neu{
 	dir = 9
 	},
-/obj/effect/landmark/start/grabber{
-	dir = 4;
-	name = "Stevedore"
-	},
 /turf/open/floor/rogue/twig,
 /area/rogue/indoors/town)
 "epe" = (
@@ -8420,6 +8416,7 @@
 "iim" = (
 /obj/structure/closet/crate/chest/neu_iron,
 /obj/item/clothing/neck/roguetown/talkstone,
+/obj/item/scrying,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town/magician)
 "iiy" = (
@@ -18624,7 +18621,7 @@
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town/shop)
 "siW" = (
-/obj/effect/landmark/start/lady{
+/obj/effect/landmark/start/consort{
 	dir = 8
 	},
 /turf/open/floor/carpet/royalblack,
@@ -20757,9 +20754,6 @@
 /area/rogue/indoors/town)
 "upc" = (
 /obj/structure/bed/rogue/hay,
-/obj/effect/landmark/start/grabber{
-	name = "Stevedore"
-	},
 /turf/open/floor/rogue/twig,
 /area/rogue/indoors/town)
 "upl" = (
@@ -24146,7 +24140,7 @@
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town/magician)
 "xHq" = (
-/obj/effect/landmark/start/barkeep{
+/obj/effect/landmark/start/innkeep{
 	dir = 4
 	},
 /turf/open/floor/rogue/ruinedwood,

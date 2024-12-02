@@ -95,9 +95,9 @@
 	icon_state = "mazekey"
 	lockid = "banditcamp"
 
-/obj/item/roguekey/queen
-	name = "lady key"
-	desc = "The Lady's key."
+/obj/item/roguekey/consort
+	name = "consort key"
+	desc = "The royal consort's key."
 	icon_state = "mazekey"
 	lockid = "lord"
 
@@ -114,13 +114,13 @@
 	lockid = "dungeon"
 
 /obj/item/roguekey/soilson
-	name = "Soilson Key"
+	name = "farmhouse Key"
 	desc = "This key is used by the soilsons."
 	icon_state = "rustkey"
 	lockid = "soilson"
 
 /obj/item/roguekey/warehouse
-	name = "Warehouse Key"
+	name = "warehouse Key"
 	desc = "This key opens the Steward's warehouse."
 	icon_state = "rustkey"
 	lockid = "warehouse"
@@ -142,6 +142,13 @@
 	desc = "A key used by the Merchant's Guild."
 	icon_state = "cheesekey"
 	lockid = "merchant"
+
+/obj/item/roguekey/mercator
+	name = "mercator key"
+	desc = "A key to some special treasure."
+	icon_state = "cheesekey"
+	lockid = "mercator"
+	color = CLOTHING_FYRITIUS_DYE
 
 /obj/item/roguekey/shop
 	name = "shop key"
@@ -216,11 +223,22 @@
 	lockid = "mansionvampire"
 
 
+/obj/item/roguekey/makers_guild
+	name = "makers guild key"
+	icon_state = "greenkey"
+	lockid = "makers"
+
 /obj/item/roguekey/blacksmith
 	name = "blacksmith key"
-	desc = "This key opens a blacksmith's workshop."
+	desc = "This key opens a blacksmiths workshop."
 	icon_state = "brownkey"
 	lockid = "blacksmith"
+
+/obj/item/roguekey/blacksmith_home
+	name = "blacksmith home key"
+	desc = "This key opens a blacksmiths home."
+	icon_state = "rustkey"
+	lockid = "armorsmith" // used to maintain compatibility with older maps and make it easier to switch the classses on/off
 
 /obj/item/roguekey/butcher
 	name = "butcher key"
@@ -270,7 +288,7 @@
 
 /obj/item/roguekey/niteman
 	name = "nitemaster's key"
-	desc = "The master key of Eora's House."
+	desc = "The master key of the bathhouse."
 	icon_state = "greenkey"
 	lockid = "nightman"
 
@@ -321,6 +339,11 @@
 	desc = "This key is used by the Physickers."
 	icon_state = "birdkey"
 	lockid = "doctor"
+
+/obj/item/roguekey/tailor
+	name = "tailors key"
+	icon_state = "brownkey"
+	lockid = "tailor"
 
 //grenchensnacker
 /obj/item/roguekey/porta

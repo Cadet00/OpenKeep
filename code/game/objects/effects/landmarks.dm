@@ -204,11 +204,11 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	name = "Merchant"
 	icon_state = "arrow"
 
-/obj/effect/landmark/start/grabber
-	name = "Grabber"
+/obj/effect/landmark/start/stevedore
+	name = "Stevedore"
 	icon_state = "arrow"
 
-/obj/effect/landmark/start/barkeep //Go figure someone breaks something
+/obj/effect/landmark/start/innkeep
 	name = "Innkeep"
 	icon_state = "arrow"
 
@@ -226,6 +226,10 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 
 /obj/effect/landmark/start/armorsmith
 	name = "Armorer"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/blacksmith
+	name = "Blacksmith"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/tailor
@@ -268,8 +272,8 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	name = "Beggar"
 	icon_state = "arrow"
 
-/obj/effect/landmark/start/lady
-	name = "Queen"
+/obj/effect/landmark/start/consort
+	name = "Consort"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/prince
